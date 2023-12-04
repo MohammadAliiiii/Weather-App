@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Weather App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+            </form>
+        </div>
+    </div>
+</nav>
+        <div class="box" style="display: flex; margin: 4vh 2vw; justify-content: center;">
+
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="city" style="width: 50vw;">
+            <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+        </div>
+        <div class="weatherfor" style="justify-content: center; display: flex;">
+            <h1 id="cityNamee" style="margin: 2vh 2vw 4vh 2vw;"></h1>
+        </div>
+      <div class="container" style="width: 100%;">
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Temperature(in degree)</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title" id="Temp" style="font-size: 20vh;"></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">other information</h4>
+                    </div>
+                    <div class="card-body" style="font-size: 24px;">
+                  <ul class="list-unstyled mt-3 mb-4">
+                      <li>Sunrise is at <span id="Sunrise"></span></li>
+                      <li>Sunset is at <span id="Sunset"></span></li>
+                      <li>Wind Speed is <span id="Wind_speed"></span></li>
+                      <li>Wind Degrees is <span id="Wind_degrees"></span></li>
+                    <li>Cloud_pct is <span id="Cloud_pct"></span></li>
+                </ul>
+            </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                    <div class="card-header py-3 text-bg-primary border-primary">
+                        <h4 class="my-0 fw-normal">Moreover Information</h4>
+                    </div>
+                    <div class="card-body">
+                  <ul class="list-unstyled mt-3 mb-4" style="font-size: 30px;">
+                    <li>Feels like <span id="Feels_like"></span></li>
+                    <li>Minimum Temperature is <span id="Min_temp"></span></li>
+                      <li>Humidity is <span id="Humidity"></span></li>
+                      <li>Maximum Temperature is <span id="Max_temp"></span></li>
+                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+          </div>
+          <!-- <h2 class="display-6 text-center mb-4">Weather of some common places:</h2>
+          <div class="table-responsive">
+              <table class="table text-center">
+                  <thead>
+                      <tr>
+                          <th style="width: 34%;"></th>
+                          <th style="width: 22%;">Cloud_pct</th>
+                          <th style="width: 22%;">Temp</th>
+                <th style="width: 22%;">Feels_like</th>
+                <th style="width: 22%;">Humidity</th>
+                <th style="width: 22%;">Min_temp</th>
+                <th style="width: 22%;">Max_temp </th>
+                <th style="width: 22%;">Wind_speed</th>
+                <th style="width: 22%;">Wind_degrees</th>
+                <th style="width: 22%;">Sunrise</th>
+                <th style="width: 22%;">Sunset</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="text-start">Delhi</th>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">Shanghai</th>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                </tr>
+              </tbody>
+      
+              <tbody>
+                <tr>
+                  <th scope="row" class="text-start">London</th>
+                  <td id="LondonCloud_pct">1</td>
+                  <td id="LondonTemp">2</td>
+                  <td id="LondonFeels_like">3</td>
+                  <td id="LondonHumidity">4</td>
+                  <td id="LondonMin_temp">5</td>
+                  <td id="LondonMax_temp">5</td>
+                  <td id="LondonWind_speed">5</td>
+                  <td id="LondonWind_degrees">5</td>
+                  <td id="LondonSunrise	">5</td>
+                  <td id="LondonSunset">5</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">Paris</th>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">Berlin</th>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">Rome</th>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div> -->
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</html>
